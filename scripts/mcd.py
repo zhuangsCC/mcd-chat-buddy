@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -134,9 +135,8 @@ def score(query: str, name: str) -> float:
 TIE_RATIO = 0.85
 MIN_SCORE = 0.35
 
-# 用户话里带这些字，才算在点套餐（四件套/随心选/开心乐园餐…）。
-# 没带就别让套餐盖过单品 —— 实测「麦辣鸡腿堡」是「麦辣鸡腿堡四件套」的子串（0.9 分），
-# 会压过真单品「麦辣鸡腿汉堡」（0.773 分），¥23 的汉堡被悄悄换成 ¥28 的套餐。
+# 用户话里带这些字才算在点套餐；没带，套餐就打对折再比 ——
+# 实测「麦辣鸡腿堡」是「麦辣鸡腿堡四件套」的子串（0.9 分），会压过真单品（0.773 分）
 COMBO_WORDS = ("套", "组合", "随心", "餐", "盒", "桶", "拼")
 
 # 列套餐时最多铺几个。这家店实测有 58 个，全铺出来屏幕装不下、图也太多。
@@ -146,11 +146,8 @@ COMBO_LIMIT = 12
 def match(query: str, products: list) -> list:
     """按口语词挑餐品，最像的排前面。挑不到就是空。
 
-    分数打平时**名字短的优先**：用户说「麦旋风」，菜单上既有「经典麦旋风」
-    也有「蓝莓爆爆珠麦旋风」，两个都是子串命中、分数一样 ——
-    短的那个才是不带修饰的经典款。
-
-    用户没提套餐字眼时，套餐一律打对折再比：**说单品就给单品**。
+    分数打平时**名字短的优先**：「麦旋风」落到不带修饰的「经典麦旋风」。
+    用户没提套餐字眼时，套餐一律打对折再比：**说单品就给单品**；
     真想要套餐，说全名（含「套」「随心选」）或者走 `mcd.py combo`。
     """
     wants_combo = any(w in norm(query) for w in COMBO_WORDS)
@@ -179,11 +176,17 @@ def yuan(cents) -> str:
     return f"¥{cents / 100:.1f}"
 
 
+def small_img(url: str) -> str:
+    """官方图等比压到 160px 再展示 —— 图床只有 320 一种，聊天里显得大。
+    图还是那张官方图；设 MCD_RAW_IMG=1 拿原图。"""
+    if not url or os.environ.get("MCD_RAW_IMG"):
+        return url
+    return f"https://images.weserv.nl/?url={url.split('://', 1)[-1]}&w=160&n=-1"
+
+
 def kcal_text(product) -> str:
     """热量怎么念。不知道就说不知道，**绝不写成 0**。
-
-    「经典麦旋风」这种是选口味的，上面那个数字只是**默认口味**的，
-    所以要把口味也摊出来（奥利奥 266 / 草莓 295）。
+    「经典麦旋风」这种选口味的容器，要把口味摊出来（奥利奥 266 / 草莓 295）。
     """
     if product.kcal is None:
         text = "热量暂无"
@@ -206,7 +209,7 @@ def render_menu(store: dict, rows: list[dict]) -> str:
     lines = [f"**{store_line(store)}**", ""]
     has_qty = any(r.get("quantity", 1) > 1 for r in rows)
     def img_cell(p):  # WorkBuddy 会把 <img> 标签当不安全脚本拦截（白屏），只认 Markdown 图片语法
-        return f"![{p.name}]({p.image})" if p.image else ""
+        return f"![{p.name}]({small_img(p.image)})" if p.image else ""
     if len(rows) > 1 or has_qty:
         header = "| 你要的 | 菜单上叫 | 官方实物图 | 数量 | 单价 | 小计 | 热量 |" if has_qty else "| 你要的 | 菜单上叫 | 官方实物图 | 单价 | 热量 |"
         sep = "|:---|:---|:---:|:---:|---:|---:|---:|" if has_qty else "|:---|:---|:---:|---:|---:|"
@@ -232,15 +235,13 @@ def render_menu(store: dict, rows: list[dict]) -> str:
     if len(rows) == 1 and not has_qty:
         product = rows[0]["product"]
         if product.image:
-            lines += ["", img_cell(product)]
+            lines += ["", f"![{product.name}]({small_img(product.image)})"]
     return "\n".join(lines)
 
 
 def combo_hint(engine, rows: list[dict]) -> str:
     """买多件时比一句价：有没有套餐把要的几样全含了、还更便宜。
-
-    **只提示不替换** —— 多出来的东西要点明，换不换用户说了算
-    （红线：不怂恿加量）。数量不齐（2 汉堡 1 可乐）不比，账会算不平。
+    只提示不替换（红线：不怂恿加量）；数量不齐（2 汉堡 1 可乐）不比，账会算不平。
     """
     qtys = {r.get("quantity", 1) for r in rows}
     if len(rows) < 2 or len(qtys) != 1:
@@ -302,8 +303,7 @@ def cmd_where(client: McDMcpClient, place: str) -> int:
 def load_engine(client: McDMcpClient, saved: dict):
     """从近到远，挑一家**现在真的能点餐**的店。
 
-    光看营业状态不够 —— 实测有门店标着「营业中」，
-    23:05 拉菜单却报 600057「门店可能已关闭或不在营业时间」。
+    光看营业状态不够 —— 实测有门店标着「营业中」，23:05 拉菜单却报 600057。
     所以直接拿菜单试，谁出得来算谁的。
 
     返回 (门店, 引擎)。一家都不行就返回 (None, None)。
@@ -439,7 +439,7 @@ def cmd_combo(client: McDMcpClient, saved: dict, args: list[str]) -> int:
     lines.append("")
     for product, _ in rows:
         if product.image:
-            lines.append(f"![{product.name}]({product.image})")
+            lines.append(f"![{product.name}]({small_img(product.image)})")
     print("\n".join(lines))
     return 0
 
@@ -606,8 +606,7 @@ def cmd_suggest(client: McDMcpClient, saved: dict, raw_args: list[str]) -> int:
         valid_combos.sort(key=lambda x: (-x[1]["kcal"] / max(x[0].price, 1)))
         goal_desc = "超值推荐（最实惠划算）"
 
-    # 组成和价格都一样的只留一个 —— 「随心选」和原版套餐经常是同一套东西，
-    # 不去重的话推荐位会被它占掉一半
+    # 组成和价格都一样的只留一个 —— 「随心选」和原版套餐经常是同一套东西
     seen, unique = set(), []
     for c, b in valid_combos:
         key = (tuple(sorted(p["name"] for p in b["parts"])), c.price)
@@ -632,7 +631,7 @@ def cmd_suggest(client: McDMcpClient, saved: dict, raw_args: list[str]) -> int:
         lines.append(f"### 方案 {idx}：{c.name} · {price_str} · {kcal_str}")
         lines.append(f"• **包含**：{parts_str}")
         if img_url:
-            lines.append(f"![{c.name}]({img_url})")
+            lines.append(f"![{c.name}]({small_img(img_url)})")
         lines.append("")
 
     lines.append("想点哪套？直接告诉我方案编号或套餐名，确认后即可下单！")

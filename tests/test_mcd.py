@@ -134,12 +134,15 @@ class TestRender(unittest.TestCase):
     def test_images_are_included(self):
         """用户原话：「不管怎么样，图片都要报上来的」。
 
-        WorkBuddy 会拦截 <img> 标签（白屏）—— 图必须用 Markdown 语法。
+        WorkBuddy 会拦截 <img> 标签（白屏）—— 图必须用 Markdown 语法；
+        官方图 320px 聊天里显大，等比缩到 160 再展示（用户认可：差不多就行）。
         """
         rows = [{"ask": "薯条", "product": product("薯条", image="https://x/1.png"),
                  "cents": 1400}]
         rendered = render_menu({}, rows)
-        self.assertIn("![薯条](https://x/1.png)", rendered)
+        self.assertIn("![薯条](", rendered)
+        self.assertIn("images.weserv.nl", rendered)
+        self.assertIn("url=x/1.png", rendered)   # 官方原图包在缩图代理里
         self.assertNotIn("<img", rendered)
 
     def test_image_lives_in_its_own_column(self):
@@ -148,7 +151,7 @@ class TestRender(unittest.TestCase):
                 {"ask": "b", "product": product("b", image="https://x/b.png"), "cents": 2000}]
         rendered = render_menu({}, rows)
         self.assertIn("官方实物图", rendered)
-        self.assertIn("| a | a | ![a](https://x/a.png) |", rendered)
+        self.assertIn("| a | a | ![a](", rendered)
         self.assertNotIn("<img", rendered)
 
     def test_total_is_summed(self):
