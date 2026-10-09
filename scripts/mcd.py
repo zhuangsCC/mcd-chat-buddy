@@ -205,17 +205,20 @@ def render_menu(store: dict, rows: list[dict]) -> str:
     """把「要什么 → 多少钱多少热量」排成 Markdown，直接能贴。"""
     lines = [f"**{store_line(store)}**", ""]
     has_qty = any(r.get("quantity", 1) > 1 for r in rows)
+    def img_cell(p):  # WorkBuddy 会把 <img> 标签当不安全脚本拦截（白屏），只认 Markdown 图片语法
+        return f"![{p.name}]({p.image})" if p.image else ""
     if len(rows) > 1 or has_qty:
-        header = "| 你要的 | 菜单上叫 | 数量 | 单价 | 小计 | 热量 |" if has_qty else "| 你要的 | 菜单上叫 | 单价 | 热量 |"
-        sep = "|:---|:---|:---:|---:|---:|---:|" if has_qty else "|:---|:---|---:|---:|"
+        header = "| 你要的 | 菜单上叫 | 官方实物图 | 数量 | 单价 | 小计 | 热量 |" if has_qty else "| 你要的 | 菜单上叫 | 官方实物图 | 单价 | 热量 |"
+        sep = "|:---|:---|:---:|:---:|---:|---:|---:|" if has_qty else "|:---|:---|:---:|---:|---:|"
         lines += [header, sep]
         for row in rows:
             kcal = row.get("kcal_text") or kcal_text(row["product"])
+            pic = img_cell(row["product"])
             if has_qty:
-                lines.append(f"| {row['ask']} | {row['product'].name} | {row.get('quantity', 1)} | "
+                lines.append(f"| {row['ask']} | {row['product'].name} | {pic} | {row.get('quantity', 1)} | "
                              f"{yuan(row.get('single_cents', row['cents']))} | {yuan(row['cents'])} | {kcal} |")
             else:
-                lines.append(f"| {row['ask']} | {row['product'].name} | "
+                lines.append(f"| {row['ask']} | {row['product'].name} | {pic} | "
                              f"{yuan(row['cents'])} | {kcal} |")
     else:
         row = rows[0]
@@ -225,12 +228,11 @@ def render_menu(store: dict, rows: list[dict]) -> str:
     total = sum(r["cents"] for r in rows)
     lines += ["", f"**合计 {yuan(total)}**"]
 
-    # 图必须有。约束宽度（160px）和圆角，保证在界面/聊天框里精致适中，不破坏版面。
-    lines.append("")
-    for row in rows:
-        product = row["product"]
+    # 多件时图已嵌在「官方实物图」列里，这里只补单件那一张
+    if len(rows) == 1 and not has_qty:
+        product = rows[0]["product"]
         if product.image:
-            lines.append(f'<img src="{product.image}" alt="{product.name}" width="160" style="border-radius:8px;margin:6px 0;display:block;">')
+            lines += ["", img_cell(product)]
     return "\n".join(lines)
 
 
@@ -437,7 +439,7 @@ def cmd_combo(client: McDMcpClient, saved: dict, args: list[str]) -> int:
     lines.append("")
     for product, _ in rows:
         if product.image:
-            lines.append(f'<img src="{product.image}" alt="{product.name}" width="160" style="border-radius:8px;margin:6px 0;display:block;">')
+            lines.append(f"![{product.name}]({product.image})")
     print("\n".join(lines))
     return 0
 
@@ -630,7 +632,7 @@ def cmd_suggest(client: McDMcpClient, saved: dict, raw_args: list[str]) -> int:
         lines.append(f"### 方案 {idx}：{c.name} · {price_str} · {kcal_str}")
         lines.append(f"• **包含**：{parts_str}")
         if img_url:
-            lines.append(f'<img src="{img_url}" width="160" style="border-radius:8px;margin:6px 0;">')
+            lines.append(f"![{c.name}]({img_url})")
         lines.append("")
 
     lines.append("想点哪套？直接告诉我方案编号或套餐名，确认后即可下单！")

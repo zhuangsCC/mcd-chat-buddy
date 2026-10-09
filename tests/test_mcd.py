@@ -132,12 +132,24 @@ class TestKcalText(unittest.TestCase):
 
 class TestRender(unittest.TestCase):
     def test_images_are_included(self):
-        """用户原话：「不管怎么样，图片都要报上来的」。"""
+        """用户原话：「不管怎么样，图片都要报上来的」。
+
+        WorkBuddy 会拦截 <img> 标签（白屏）—— 图必须用 Markdown 语法。
+        """
         rows = [{"ask": "薯条", "product": product("薯条", image="https://x/1.png"),
                  "cents": 1400}]
         rendered = render_menu({}, rows)
-        self.assertIn("https://x/1.png", rendered)
-        self.assertIn("薯条", rendered)
+        self.assertIn("![薯条](https://x/1.png)", rendered)
+        self.assertNotIn("<img", rendered)
+
+    def test_image_lives_in_its_own_column(self):
+        """多件时图嵌进「官方实物图」列，防大图撑屏。"""
+        rows = [{"ask": "a", "product": product("a", image="https://x/a.png"), "cents": 1000},
+                {"ask": "b", "product": product("b", image="https://x/b.png"), "cents": 2000}]
+        rendered = render_menu({}, rows)
+        self.assertIn("官方实物图", rendered)
+        self.assertIn("| a | a | ![a](https://x/a.png) |", rendered)
+        self.assertNotIn("<img", rendered)
 
     def test_total_is_summed(self):
         rows = [{"ask": "a", "product": product("a"), "cents": 2300},
