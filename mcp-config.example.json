@@ -1,0 +1,43 @@
+{
+  "_说明": [
+    "麦当劳 MCP 的接入配置样例。",
+    "",
+    "官方文档：https://open.mcd.cn/mcp/doc",
+    "接入地址：https://mcp.mcd.cn（Streamable HTTP，协议 2025-06-18）",
+    "鉴权：请求头 Authorization: Bearer <MCD_MCP_TOKEN>",
+    "限流：每个 Token 每分钟 600 次，超了返回 429",
+    "",
+    "怎么用：把下面 mcd-mcp 这一块整段粘到你 MCP Client 的配置里，",
+    "然后把 ${MCD_MCP_TOKEN} 换成你自己的 Token。",
+    "",
+    "⚠️ 不要把真 Token 写进这个文件再提交。",
+    "   本仓库里 scripts/mcp_client.py 是直接从环境变量 MCD_MCP_TOKEN 读的，",
+    "   根本不读这个文件 —— 它只是给你配别的客户端时抄的样板。",
+    "   有些客户端不支持 ${VAR} 展开，那就只能填明文，但那个文件别提交。"
+  ],
+
+  "mcpServers": {
+    "mcd-mcp": {
+      "type": "streamablehttp",
+      "url": "https://mcp.mcd.cn",
+      "headers": {
+        "Authorization": "Bearer ${MCD_MCP_TOKEN}"
+      }
+    }
+  },
+
+  "_别的客户端": {
+    "Claude Code / .mcp.json": {
+      "mcpServers": {
+        "mcd-mcp": {
+          "type": "http",
+          "url": "https://mcp.mcd.cn/mcp-servers/mcd-mcp",
+          "headers": {
+            "Authorization": "Bearer ${MCD_MCP_TOKEN}"
+          }
+        }
+      }
+    },
+    "_注": "部分客户端的地址要带 /mcp-servers/mcd-mcp 后缀；不带也能通，两个都试一下。"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "content": [
+    {
+      "text": "每个门店的基本信息按单行展示：\n- **门店名称**: data[].storeName\n- **门店地址**: data[].address\n- **到店距离**: data[].distance\n- **门店编号**: data[].storeCode, 唯一编号，工具入参\n- **业务编码**: data[].beCode, 不为空时，唯一编号，工具入参\n- **支持预约**: data[].reservation，是否支持预约，true:支持，false:不支持\n当 reservation=true 时，⚠️ reservationTimeOptions 中的每一条数据都直接影响用户选择，缺少任何一条都会导致用户无法预约，严禁省略\ntoday=true 的日期标记星号(*)\n{\"success\":true,\"code\":200,\"message\":\"请求成功\",\"datetime\":\"2026-10-09 18:13:10\",\"traceId\":\"637f29e5de3674a9f2398f63b6f094b7\",\"data\":[{\"storeCode\":\"1409001\",\"storeName\":\"麦当劳××市××广场餐厅\",\"address\":\"××路1号××广场首层\",\"distance\":200,\"businessStatus\":true,\"businessStartTime\":\"07:00\",\"businessEndTime\":\"23:30\",\"longitude\":0.0,\"latitude\":0.0,\"reservation\":true,\"reservationTimeOptions\":[{\"date\":\"2026-10-09\",\"today\":true,\"reservationOptionText\":\"夜市(17:14至21:45)，宵夜(22:14至23:16)\"},{\"date\":\"2026-10-10\",\"today\":false,\"reservationOptionText\":\"早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)\"}]},{\"storeCode\":\"1409002\",\"storeName\":\"麦当劳××市××路餐厅\",\"address\":\"××路2号××商业广场首层\",\"distance\":450,\"businessStatus\":true,\"businessStartTime\":\"07:00\",\"businessEndTime\":\"23:30\",\"longitude\":0.0,\"latitude\":0.0,\"reservation\":true,\"reservationTimeOptions\":[{\"date\":\"2026-10-09\",\"today\":true,\"reservationOptionText\":\"夜市(17:14至21:45)，宵夜(22:14至23:16)\"},{\"date\":\"2026-10-10\",\"today\":false,\"reservationOptionText\":\"早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)\"}]},{\"storeCode\":\"1409003\",\"storeName\":\"××市××路快捷小站\",\"address\":\"××街道××路3号一层\",\"distance\":800,\"businessStatus\":true,\"businessStartTime\":\"07:00\",\"businessEndTime\":\"23:30\",\"longitude\":0.0,\"latitude\":0.0,\"reservation\":true,\"reservationTimeOptions\":[{\"date\":\"2026-10-09\",\"today\":true,\"reservationOptionText\":\"夜市(17:14至21:45)，宵夜(22:14至23:16)\"},{\"date\":\"2026-10-10\",\"today\":false,\"reservationOptionText\":\"早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)\"}]},{\"storeCode\":\"1409004\",\"storeName\":\"麦当劳××市××天地餐厅\",\"address\":\"××天地路4号首层商铺\",\"distance\":1200,\"businessStatus\":true,\"businessStartTime\":\"07:00\",\"businessEndTime\":\"23:30\",\"longitude\":0.0,\"latitude\":0.0,\"reservation\":true,\"reservationTimeOptions\":[{\"date\":\"2026-10-09\",\"today\":true,\"reservationOptionText\":\"夜市(17:14至21:45)，宵夜(22:14至23:16)\"},{\"date\":\"2026-10-10\",\"today\":false,\"reservationOptionText\":\"早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)\"}]},{\"storeCode\":\"1409005\",\"storeName\":\"麦当劳××市××大厦餐厅\",\"address\":\"××路××大厦首层\",\"distance\":1600,\"businessStatus\":true,\"businessStartTime\":\"07:00\",\"businessEndTime\":\"23:30\",\"longitude\":0.0,\"latitude\":0.0,\"reservation\":true,\"reservationTimeOptions\":[{\"date\":\"2026-10-09\",\"today\":true,\"reservationOptionText\":\"夜市(17:14至21:45)，宵夜(22:14至23:16)\"},{\"date\":\"2026-10-10\",\"today\":false,\"reservationOptionText\":\"早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)\"}]}]}",
+      "type": "text"
+    }
+  ],
+  "isError": false,
+  "structuredContent": {
+    "success": true,
+    "code": 200,
+    "message": "请求成功",
+    "datetime": "2026-10-09 18:13:10",
+    "traceId": "637f29e5de3674a9f2398f63b6f094b7",
+    "data": [
+      {
+        "storeCode": "1409001",
+        "storeName": "麦当劳××市××广场餐厅",
+        "address": "××路1号××广场首层",
+        "distance": 200,
+        "businessStatus": true,
+        "businessStartTime": "07:00",
+        "businessEndTime": "23:30",
+        "longitude": 0.0,
+        "latitude": 0.0,
+        "reservation": true,
+        "reservationTimeOptions": [
+          {
+            "date": "2026-10-09",
+            "today": true,
+            "reservationOptionText": "夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          },
+          {
+            "date": "2026-10-10",
+            "today": false,
+            "reservationOptionText": "早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          }
+        ]
+      },
+      {
+        "storeCode": "1409002",
+        "storeName": "麦当劳××市××路餐厅",
+        "address": "××路2号××商业广场首层",
+        "distance": 450,
+        "businessStatus": true,
+        "businessStartTime": "07:00",
+        "businessEndTime": "23:30",
+        "longitude": 0.0,
+        "latitude": 0.0,
+        "reservation": true,
+        "reservationTimeOptions": [
+          {
+            "date": "2026-10-09",
+            "today": true,
+            "reservationOptionText": "夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          },
+          {
+            "date": "2026-10-10",
+            "today": false,
+            "reservationOptionText": "早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          }
+        ]
+      },
+      {
+        "storeCode": "1409003",
+        "storeName": "××市××路快捷小站",
+        "address": "××街道××路3号一层",
+        "distance": 800,
+        "businessStatus": true,
+        "businessStartTime": "07:00",
+        "businessEndTime": "23:30",
+        "longitude": 0.0,
+        "latitude": 0.0,
+        "reservation": true,
+        "reservationTimeOptions": [
+          {
+            "date": "2026-10-09",
+            "today": true,
+            "reservationOptionText": "夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          },
+          {
+            "date": "2026-10-10",
+            "today": false,
+            "reservationOptionText": "早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          }
+        ]
+      },
+      {
+        "storeCode": "1409004",
+        "storeName": "麦当劳××市××天地餐厅",
+        "address": "××天地路4号首层商铺",
+        "distance": 1200,
+        "businessStatus": true,
+        "businessStartTime": "07:00",
+        "businessEndTime": "23:30",
+        "longitude": 0.0,
+        "latitude": 0.0,
+        "reservation": true,
+        "reservationTimeOptions": [
+          {
+            "date": "2026-10-09",
+            "today": true,
+            "reservationOptionText": "夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          },
+          {
+            "date": "2026-10-10",
+            "today": false,
+            "reservationOptionText": "早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          }
+        ]
+      },
+      {
+        "storeCode": "1409005",
+        "storeName": "麦当劳××市××大厦餐厅",
+        "address": "××路××大厦首层",
+        "distance": 1600,
+        "businessStatus": true,
+        "businessStartTime": "07:00",
+        "businessEndTime": "23:30",
+        "longitude": 0.0,
+        "latitude": 0.0,
+        "reservation": true,
+        "reservationTimeOptions": [
+          {
+            "date": "2026-10-09",
+            "today": true,
+            "reservationOptionText": "夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          },
+          {
+            "date": "2026-10-10",
+            "today": false,
+            "reservationOptionText": "早餐(07:14至10:15)，午餐(10:44至14:15)，下午茶(14:44至16:45)，夜市(17:14至21:45)，宵夜(22:14至23:16)"
+          }
+        ]
+      }
+    ]
+  }
+}

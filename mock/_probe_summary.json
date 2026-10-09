@@ -1,0 +1,47 @@
+{
+  "steps": [
+    {
+      "tool": "now-time-info",
+      "ok": true,
+      "note": "已存入 mock/"
+    },
+    {
+      "tool": "query-nearby-stores",
+      "ok": true,
+      "note": "已存入 mock/"
+    },
+    {
+      "tool": "query-meals",
+      "ok": true,
+      "note": "已存入 mock/"
+    },
+    {
+      "tool": "query-meal-detail",
+      "ok": true,
+      "note": "厚薯泥培根肉酱双牛堡两件套 (code=9900015450)"
+    },
+    {
+      "tool": "query-meal-detail.single",
+      "ok": true,
+      "note": "麦辣鸡腿汉堡 (code=1440)"
+    },
+    {
+      "tool": "list-nutrition-foods",
+      "ok": true,
+      "note": "已存入 mock/"
+    },
+    {
+      "tool": "query-store-coupons",
+      "ok": true,
+      "note": "已存入 mock/"
+    },
+    {
+      "tool": "calculate-price",
+      "ok": true,
+      "note": "已存入 mock/"
+    }
+  ],
+  "storeCode": "1409001",
+  "city": "××市",
+  "keyword": "××路"
+}

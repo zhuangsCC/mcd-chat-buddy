@@ -1,0 +1,44 @@
+{
+  "content": [
+    {
+      "text": "## Response Structure \n- **重要**: 同一券ID可对应多个券码，展示时按券ID分组\n## 字段说明\n| 字段 | 数据源 | 展示规则 | 是否展示\n|-----|--------|----------|--|\n| 券名 | `data[].title` | 完整显示 | 强制展示 |\n| 券ID | `data[].couponId` | 分组标识 | 强制展示 |\n| 券码 | `data[].couponCode` | 多个时显示\\\"首个(共N张)\\\" | 强制展示 |\n| 有效期 | `data[].tradeDateTime` | 格式化日期 | 强制展示 |\n| 适用商品 | `data[].products[].productName` | 多个商品分行显示 | 强制展示 |\n| 商品编码 | `data[].products[].productCode` | 对应商品编码 | 强制展示 |\n## 输出格式\n## {data[].title}(共{券码}张)\n|券ID|券码|有效期|适用商品|商品编码|\n|:---:|:---:|:---:|:---:|:---:|\n|{data[].couponId}|{首个data[].couponCode}|{data[].tradeDateTime}|{data[].products[].productName}|{data[].products[].productCode}|{\"success\":true,\"code\":200,\"message\":\"请求成功\",\"datetime\":\"2026-10-09 18:13:22\",\"traceId\":\"85cc4c61bfce75806f8147c3b8464f47\",\"data\":[{\"title\":\"麦旋风任选\",\"couponId\":\"71F939A874735C2495517B8B24323CFB\",\"couponCode\":\"MCD6C0G00201080EXL695\",\"tradeDateTime\":\"2026-10-05 10:30:00-2026-10-09 23:59:59\",\"products\":[{\"productCode\":\"9900014239\",\"productName\":\"麦旋风任选1\"}],\"promotionId\":\"112458030\"},{\"title\":\"薯薯任选\",\"couponId\":\"E86377A0349D730EF7C27EBBE7B4C0FE\",\"couponCode\":\"MCD600EF070099XLC16G0\",\"tradeDateTime\":\"2026-10-05 10:30:00-2026-10-09 23:59:59\",\"products\":[{\"productCode\":\"9900016370\",\"productName\":\"薯薯任选\"}],\"promotionId\":\"112458027\"}]}",
+      "type": "text"
+    }
+  ],
+  "isError": false,
+  "structuredContent": {
+    "success": true,
+    "code": 200,
+    "message": "请求成功",
+    "datetime": "2026-10-09 18:13:22",
+    "traceId": "85cc4c61bfce75806f8147c3b8464f47",
+    "data": [
+      {
+        "title": "麦旋风任选",
+        "couponId": "71F939A874735C2495517B8B24323CFB",
+        "couponCode": "MCD6C0G00201080EXL695",
+        "tradeDateTime": "2026-10-05 10:30:00-2026-10-09 23:59:59",
+        "products": [
+          {
+            "productCode": "9900014239",
+            "productName": "麦旋风任选1"
+          }
+        ],
+        "promotionId": "112458030"
+      },
+      {
+        "title": "薯薯任选",
+        "couponId": "E86377A0349D730EF7C27EBBE7B4C0FE",
+        "couponCode": "MCD600EF070099XLC16G0",
+        "tradeDateTime": "2026-10-05 10:30:00-2026-10-09 23:59:59",
+        "products": [
+          {
+            "productCode": "9900016370",
+            "productName": "薯薯任选"
+          }
+        ],
+        "promotionId": "112458027"
+      }
+    ]
+  }
+}
