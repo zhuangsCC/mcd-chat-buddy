@@ -4,11 +4,14 @@
 
 📖 **不懂代码？看这份就够了：[使用说明（大白话版）](使用说明.md)**
 
+[![GitHub Stars](https://img.shields.io/github/stars/zhuangsCC/mcd-chat-buddy?style=flat-square&label=Stars&color=red)](https://github.com/zhuangsCC/mcd-chat-buddy/stargazers)
 [![Tencent WorkBuddy](https://img.shields.io/badge/Powered%20by-Tencent%20WorkBuddy-0052d9?style=flat-square)](#)
 [![McDonald's MCP](https://img.shields.io/badge/API-McDonald's%20Official%20MCP-red?style=flat-square)](#)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg?style=flat-square)](#)
 [![Zero Dependency](https://img.shields.io/badge/Dependencies-0%20(Pure%20Stdlib)-brightgreen?style=flat-square)](#)
-[![Tests Passing](https://img.shields.io/badge/Tests-123%20Passed-success?style=flat-square)](#)
+[![Tests Passing](https://img.shields.io/badge/Tests-130%20Passed-success?style=flat-square)](#)
+
+> ⭐ **觉得有用？点右上角 Star 支持一下** —— 2026 麦当劳程序员创意开发大赛按公开 Star 数排名，你的一颗星就是最实在的投票。
 
 ---
 
