@@ -2,6 +2,8 @@
 > **面向腾讯 WorkBuddy 与主流 Agent 的麦当劳官方 MCP 生产力 Skill**
 > 你在哪儿，说一声；想吃什么，说一声。价格、热量、实物图一起给你 —— 你的 AI"超级店员"。
 
+📖 **不懂代码？看这份就够了：[使用说明（大白话版）](使用说明.md)**
+
 [![Tencent WorkBuddy](https://img.shields.io/badge/Powered%20by-Tencent%20WorkBuddy-0052d9?style=flat-square)](#)
 [![McDonald's MCP](https://img.shields.io/badge/API-McDonald's%20Official%20MCP-red?style=flat-square)](#)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg?style=flat-square)](#)

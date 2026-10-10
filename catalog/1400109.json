@@ -1,0 +1,1307 @@
+{
+ "store_code": "1400109",
+ "store_name": "麦当劳佛山西樵金典广场餐厅",
+ "frozen_at": "2026-10-10 11:24",
+ "products": [
+  {
+   "code": "9900016076",
+   "name": "“我就喜欢”鸡薯双全盒",
+   "price": 15.9,
+   "kcal": 405,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016076_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016075",
+   "name": "龙焰芝士棒鸡腿堡三件套",
+   "price": 29.9,
+   "kcal": 866,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016075_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016073",
+   "name": "龙焰鸡腿堡三件套",
+   "price": 26.9,
+   "kcal": 866,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016073_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016077",
+   "name": "蘸酱炸鸡",
+   "price": 11.9,
+   "kcal": 230,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016077_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "9900011056",
+   "name": "全明星双人分享餐八件套",
+   "price": 49.9,
+   "kcal": 1706,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900011056_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900004064",
+   "name": "精选单人餐三件套",
+   "price": 35.0,
+   "kcal": 827,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004064_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "521950",
+   "name": "蓝莓爆爆珠麦旋风",
+   "price": 16.0,
+   "kcal": 280,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521950_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "515946",
+   "name": "浓浓黑巧（冰/热）",
+   "price": 13.9,
+   "kcal": 220,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_G515945_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "9900015856",
+   "name": "“泷”运当头四件套",
+   "price": 91.7,
+   "kcal": 1201,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900015856_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900014837",
+   "name": "枫糖风味厚松饼猪柳蛋堡三件套",
+   "price": 27.9,
+   "kcal": 591,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014837_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900014974",
+   "name": "枫糖风味厚松饼猪柳堡三件套",
+   "price": 23.9,
+   "kcal": 591,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_9900014974_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900004236",
+   "name": "人气超值四件套随心选",
+   "price": 28.0,
+   "kcal": 1091,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900004236_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900010110",
+   "name": "鱼牛汉堡四件套随心选",
+   "price": 32.0,
+   "kcal": 1119,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900010110_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900006957",
+   "name": "安格斯厚牛堡四件套随心选",
+   "price": 37.0,
+   "kcal": 1302,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900006957_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "521953",
+   "name": "龙焰芝士棒鸡腿堡",
+   "price": 27.5,
+   "kcal": 430,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521953_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521952",
+   "name": "龙焰鸡腿堡",
+   "price": 24.5,
+   "kcal": 430,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521952_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900016310",
+   "name": "龙焰芝士棒鸡腿堡四件套",
+   "price": 32.0,
+   "kcal": 1036,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016310_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016309",
+   "name": "龙焰鸡腿堡四件套",
+   "price": 29.0,
+   "kcal": 1036,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016309_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000891",
+   "name": "麦辣鸡腿堡四件套",
+   "price": 28.0,
+   "kcal": 1091,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000891_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000890",
+   "name": "板烧鸡腿堡四件套",
+   "price": 28.0,
+   "kcal": 997,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000890_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000884",
+   "name": "酥酥多笋卷四件套",
+   "price": 28.0,
+   "kcal": 948,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000884_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005462",
+   "name": "板烧鸡腿堡三件套",
+   "price": 35.0,
+   "kcal": 827,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005462_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005456",
+   "name": "麦辣鸡腿汉堡三件套",
+   "price": 34.0,
+   "kcal": 921,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005456_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005453",
+   "name": "麦香鸡套餐",
+   "price": 28.0,
+   "kcal": 805,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504967_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900015008",
+   "name": "酥酥多笋卷三件套",
+   "price": 32.0,
+   "kcal": 778,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900015008_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "1440",
+   "name": "麦辣鸡腿汉堡",
+   "price": 23.0,
+   "kcal": 485,
+   "kcal_estimated": false,
+   "nutrition_name": "麦辣鸡腿汉堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260325/product/MS_1440_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "1406",
+   "name": "板烧鸡腿堡",
+   "price": 24.0,
+   "kcal": 391,
+   "kcal_estimated": false,
+   "nutrition_name": "板烧鸡腿堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241008/product/MS_1406_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "1450",
+   "name": "麦香鸡",
+   "price": 17.0,
+   "kcal": 369,
+   "kcal_estimated": false,
+   "nutrition_name": "麦香鸡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_1450_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521816",
+   "name": "酥酥多笋卷",
+   "price": 21.0,
+   "kcal": 342,
+   "kcal_estimated": false,
+   "nutrition_name": "酥酥多笋卷",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521816_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900008746",
+   "name": "鸡肉堡单品精选",
+   "price": 24.0,
+   "kcal": 430,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260624/product/MS_9900008746_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900015726",
+   "name": "韩式甜辣酱鸡块8块",
+   "price": 19.9,
+   "kcal": 230,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260815/product/MS_9900015726_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900015151",
+   "name": "麦麦周末双人餐",
+   "price": 49.9,
+   "kcal": 1351,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015151_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900006332",
+   "name": "薄皮V翅双拼十翅",
+   "price": 49.9,
+   "kcal": 416,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260610/product/MS_9900006332_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900015730",
+   "name": "BFF四宫格小食盘",
+   "price": 39.8,
+   "kcal": 434,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015730_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900004066",
+   "name": "堡堡随心拼（7件任选）",
+   "price": 73.0,
+   "kcal": 856,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260624/product/MS_9900004066_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900005321",
+   "name": "BFF四宫格小食盘双人餐",
+   "price": 62.9,
+   "kcal": 1717,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260304/product/MS_9900005321_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016078",
+   "name": "蘸酱麦麦脆汁鸡",
+   "price": 11.9,
+   "kcal": 230,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016078_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900016079",
+   "name": "蘸酱脆皮鸡柳",
+   "price": 11.9,
+   "kcal": 230,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016079_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900016096",
+   "name": "蘸酱韩式甜辣酱鸡块",
+   "price": 11.9,
+   "kcal": 230,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016096_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900015729",
+   "name": "蘸酱BFF四宫格小食盘",
+   "price": 42.8,
+   "kcal": 459,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015729_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "521966",
+   "name": "韩式烟熏芝士风味酱",
+   "price": 3.0,
+   "kcal": 25,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521966_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521799",
+   "name": "日式鲜磨山葵酱",
+   "price": 3.0,
+   "kcal": 25,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521799_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521797",
+   "name": "北美招牌牧场酱",
+   "price": 3.0,
+   "kcal": 25,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_521797_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900013304",
+   "name": "人气经典随心配",
+   "price": 14.9,
+   "kcal": 534,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900013304_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900015568",
+   "name": "精选超值随心配",
+   "price": 13.9,
+   "kcal": 502,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015568_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900015602",
+   "name": "大堡口福三件套",
+   "price": 22.9,
+   "kcal": 866,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015602_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016301",
+   "name": "枫糖风味厚松饼猪柳蛋堡四件套",
+   "price": 28.0,
+   "kcal": 1036,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016301_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000888",
+   "name": "巨无霸四件套",
+   "price": 32.0,
+   "kcal": 1119,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000888_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000886",
+   "name": "不素之霸双层牛堡四件套",
+   "price": 32.0,
+   "kcal": 1099,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000886_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000885",
+   "name": "培根蔬萃双层牛堡四件套",
+   "price": 32.0,
+   "kcal": 1048,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000885_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000893",
+   "name": "双层深海鳕鱼堡四件套",
+   "price": 32.0,
+   "kcal": 1091,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000893_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005411",
+   "name": "不素之霸双层牛堡三件套",
+   "price": 37.5,
+   "kcal": 929,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005411_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005466",
+   "name": "巨无霸三件套",
+   "price": 37.5,
+   "kcal": 949,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005466_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005468",
+   "name": "培根蔬萃双层牛堡三件套",
+   "price": 35.5,
+   "kcal": 878,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005468_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005413",
+   "name": "双层深海鳕鱼堡三件套",
+   "price": 36.0,
+   "kcal": 921,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005413_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005460",
+   "name": "麦香鱼套餐",
+   "price": 33.5,
+   "kcal": 761,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504968_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005464",
+   "name": "双层吉士汉堡套餐",
+   "price": 34.0,
+   "kcal": 865,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504966_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005449",
+   "name": "吉士汉堡包套餐",
+   "price": 26.0,
+   "kcal": 730,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504971_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "521730",
+   "name": "枫糖风味厚松饼猪柳蛋堡",
+   "price": 22.0,
+   "kcal": 430,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521730_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521731",
+   "name": "枫糖风味厚松饼猪柳堡",
+   "price": 18.0,
+   "kcal": 430,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_521731_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "1100",
+   "name": "巨无霸",
+   "price": 26.5,
+   "kcal": 513,
+   "kcal_estimated": false,
+   "nutrition_name": "巨无霸",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1100_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900003586",
+   "name": "双层深海鳕鱼堡",
+   "price": 25.0,
+   "kcal": 485,
+   "kcal_estimated": false,
+   "nutrition_name": "双层深海鳕鱼堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900003586_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "1600",
+   "name": "麦香鱼",
+   "price": 22.5,
+   "kcal": 325,
+   "kcal_estimated": false,
+   "nutrition_name": "麦香鱼",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_1600_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "4648",
+   "name": "不素之霸双层牛堡",
+   "price": 26.5,
+   "kcal": 493,
+   "kcal_estimated": false,
+   "nutrition_name": "不素之霸双层牛堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_4648_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "1106",
+   "name": "培根蔬萃双层牛堡",
+   "price": 24.5,
+   "kcal": 442,
+   "kcal_estimated": false,
+   "nutrition_name": "培根蔬萃双层牛堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1106_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "1120",
+   "name": "双层吉士汉堡",
+   "price": 23.0,
+   "kcal": 429,
+   "kcal_estimated": false,
+   "nutrition_name": "双层吉士汉堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_1120_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521316",
+   "name": "高达吉士双牛堡",
+   "price": 22.5,
+   "kcal": 480,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_521316_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900008747",
+   "name": "牛肉堡单品精选",
+   "price": 14.0,
+   "kcal": 248,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_9900008747_320.gif",
+   "is_combo": true
+  },
+  {
+   "code": "9900000881",
+   "name": "培根安格斯厚牛堡四件套",
+   "price": 37.0,
+   "kcal": 1313,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000881_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900000882",
+   "name": "芝士安格斯厚牛堡四件套",
+   "price": 37.0,
+   "kcal": 1302,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900000882_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005428",
+   "name": "培根安格斯厚牛堡三件套",
+   "price": 45.5,
+   "kcal": 1143,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005428_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900005430",
+   "name": "芝士安格斯厚牛堡三件套",
+   "price": 42.5,
+   "kcal": 1132,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_9900005430_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "511781",
+   "name": "培根安格斯厚牛堡",
+   "price": 34.5,
+   "kcal": 707,
+   "kcal_estimated": false,
+   "nutrition_name": "培根安格斯厚牛堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_511781_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "511782",
+   "name": "芝士安格斯厚牛堡",
+   "price": 32.0,
+   "kcal": 696,
+   "kcal_estimated": false,
+   "nutrition_name": "芝士安格斯厚牛堡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260309/product/MS_511782_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900005451",
+   "name": "麦辣鸡翅4块套餐",
+   "price": 37.0,
+   "kcal": 666,
+   "kcal_estimated": true,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504972_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900004835",
+   "name": "麦乐鸡套餐",
+   "price": 25.5,
+   "kcal": 649,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260824/product/MS_G504969_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "1700",
+   "name": "麦辣鸡翅",
+   "price": 15.0,
+   "kcal": 224,
+   "kcal_estimated": true,
+   "nutrition_name": "麦辣鸡翅-2块",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260325/product/MS_G1700_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "520445",
+   "name": "薄皮焦香V翅",
+   "price": 16.0,
+   "kcal": 192,
+   "kcal_estimated": false,
+   "nutrition_name": "薄皮焦香V翅",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20241202/product/MS_520445_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "1401",
+   "name": "麦乐鸡",
+   "price": 14.5,
+   "kcal": 213,
+   "kcal_estimated": true,
+   "nutrition_name": "麦乐鸡5块",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260529/product/MS_G1401_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521156",
+   "name": "那么大鸡排（椒盐风味）",
+   "price": 14.0,
+   "kcal": 385,
+   "kcal_estimated": true,
+   "nutrition_name": "那么大鸡排",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260101/product/MS_521156_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900005432",
+   "name": "麦麦脆汁鸡1块",
+   "price": 15.0,
+   "kcal": 230,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900005432_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521986",
+   "name": "马苏里拉拉丝芝士条",
+   "price": 11.0,
+   "kcal": 200,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521986_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900016082",
+   "name": "心形薯饼5块",
+   "price": 15.0,
+   "kcal": 150,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016082_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521951",
+   "name": "灰焰圆筒",
+   "price": 5.0,
+   "kcal": 180,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521951_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "521901",
+   "name": "月下相思扭扭薯",
+   "price": 15.5,
+   "kcal": 200,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521901_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "521917",
+   "name": "泷愿成真麦旋风——大米风味",
+   "price": 16.0,
+   "kcal": 280,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521917_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "521836",
+   "name": "柠檬脆脆麦旋风",
+   "price": 16.0,
+   "kcal": 280,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G521836_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "521741",
+   "name": "脆薯饼",
+   "price": 8.5,
+   "kcal": 146,
+   "kcal_estimated": false,
+   "nutrition_name": "脆薯饼",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521741_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "4810",
+   "name": "薯条",
+   "price": 14.0,
+   "kcal": 289,
+   "kcal_estimated": true,
+   "nutrition_name": "中薯条",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250523/product/MS_G4810_320_1747877491921.png",
+   "is_combo": false
+  },
+  {
+   "code": "4437",
+   "name": "玉米杯",
+   "price": 13.5,
+   "kcal": 87,
+   "kcal_estimated": true,
+   "nutrition_name": "大杯玉米杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G4437_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "6102",
+   "name": "苹果片",
+   "price": 7.0,
+   "kcal": 32,
+   "kcal_estimated": false,
+   "nutrition_name": "苹果片",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_6102_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900008754",
+   "name": "经典麦旋风",
+   "price": 15.0,
+   "kcal": 280,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008754_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "9900008745",
+   "name": "新地",
+   "price": 12.5,
+   "kcal": 282,
+   "kcal_estimated": true,
+   "nutrition_name": "朱古力新地",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008745_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "515837",
+   "name": "圆筒冰淇淋",
+   "price": 5.0,
+   "kcal": 93,
+   "kcal_estimated": false,
+   "nutrition_name": "圆筒冰淇淋",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_515837_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900008752",
+   "name": "派",
+   "price": 8.5,
+   "kcal": 232,
+   "kcal_estimated": true,
+   "nutrition_name": "香芋派",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G9900008752_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "9900016057",
+   "name": "汉堡开心乐园餐",
+   "price": 23.5,
+   "kcal": 536,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016057_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016058",
+   "name": "鱼排堡开心乐园餐",
+   "price": 24.0,
+   "kcal": 557,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016058_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016056",
+   "name": "麦乐鸡开心乐园餐",
+   "price": 25.0,
+   "kcal": 384,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016056_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900016055",
+   "name": "开心亲子双人餐",
+   "price": 59.5,
+   "kcal": 1211,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900016055_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "506189",
+   "name": "如意百宝袋",
+   "price": 12.0,
+   "kcal": 200,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_506189_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900015561",
+   "name": "麦咖啡冰爽一夏",
+   "price": 9.9,
+   "kcal": 150,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900015561_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "515955",
+   "name": "浓浓燕麦黑巧（冰/热）",
+   "price": 15.9,
+   "kcal": 220,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20261008/product/MS_G515954_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "521871",
+   "name": "美禄可可雪冰",
+   "price": 9.9,
+   "kcal": 250,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521871_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "521791",
+   "name": "茉莉奶绿雪冰",
+   "price": 9.9,
+   "kcal": 250,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_521791_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "507411",
+   "name": "麦咖啡™美式",
+   "price": 11.9,
+   "kcal": 13,
+   "kcal_estimated": true,
+   "nutrition_name": "冰美式中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G507374_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "507409",
+   "name": "麦咖啡™奶铁",
+   "price": 13.9,
+   "kcal": 148,
+   "kcal_estimated": true,
+   "nutrition_name": "冰奶铁中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G507372_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "510479",
+   "name": "燕麦奶铁",
+   "price": 9.9,
+   "kcal": 132,
+   "kcal_estimated": true,
+   "nutrition_name": "冰燕麦奶铁中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260422/product/MS_G510481_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "507387",
+   "name": "卡布奇诺",
+   "price": 21.0,
+   "kcal": 167,
+   "kcal_estimated": true,
+   "nutrition_name": "卡布奇诺中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_G507388_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "514851",
+   "name": "咖啡阿芙佳朵",
+   "price": 15.0,
+   "kcal": 139,
+   "kcal_estimated": false,
+   "nutrition_name": "咖啡阿芙佳朵",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_514851_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "520689",
+   "name": "鲜萃咖啡",
+   "price": 10.0,
+   "kcal": 13,
+   "kcal_estimated": true,
+   "nutrition_name": "大杯鲜萃咖啡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_G520688_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "507389",
+   "name": "浓缩咖啡",
+   "price": 15.0,
+   "kcal": 13,
+   "kcal_estimated": false,
+   "nutrition_name": "浓缩咖啡",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250324/product/MS_507389_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "507394",
+   "name": "牛奶",
+   "price": 19.0,
+   "kcal": 129,
+   "kcal_estimated": true,
+   "nutrition_name": "纯牛奶（盒装）",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G5073941_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "510488",
+   "name": "燕麦奶",
+   "price": 21.0,
+   "kcal": 132,
+   "kcal_estimated": true,
+   "nutrition_name": "冰燕麦奶铁中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G510489_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900011128",
+   "name": "“堡”你欢乐套餐",
+   "price": 28.0,
+   "kcal": 450,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900011128_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900011121",
+   "name": "“苹”水相“鱼”套餐",
+   "price": 36.0,
+   "kcal": 412,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900011121_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900011126",
+   "name": "酥脆无双套餐",
+   "price": 20.0,
+   "kcal": 434,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260701/product/MS_9900011126_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900011123",
+   "name": "“辣”么快乐套餐",
+   "price": 24.0,
+   "kcal": 394,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900011123_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900009245",
+   "name": "牛气满满套餐",
+   "price": 35.0,
+   "kcal": 495,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900009245_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "9900009242",
+   "name": "“苹板”支撑Pro套餐",
+   "price": 39.5,
+   "kcal": 476,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900009242_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "521817",
+   "name": "【美汁源】“多汁柠柠”",
+   "price": 12.0,
+   "kcal": 200,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20260807/product/MS_521817_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "9900008751",
+   "name": "可乐",
+   "price": 9.5,
+   "kcal": 147,
+   "kcal_estimated": true,
+   "nutrition_name": "可乐中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_9900008751_320.gif",
+   "is_combo": false
+  },
+  {
+   "code": "3010",
+   "name": "雪碧",
+   "price": 9.5,
+   "kcal": 105,
+   "kcal_estimated": true,
+   "nutrition_name": "雪碧中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G3010_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "515520",
+   "name": "怡泉+C",
+   "price": 11.5,
+   "kcal": 110,
+   "kcal_estimated": true,
+   "nutrition_name": "中杯怡泉+C",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515520_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "2430",
+   "name": "【美汁源】“黄金橙橙”",
+   "price": 13.0,
+   "kcal": 165,
+   "kcal_estimated": false,
+   "nutrition_name": "【美汁源】“黄金橙橙”",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_2430_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "515280",
+   "name": "阳光柠檬红茶",
+   "price": 9.5,
+   "kcal": 117,
+   "kcal_estimated": true,
+   "nutrition_name": "阳光柠檬红茶中杯",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_G515280_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "6352",
+   "name": "阳光橙麦炫酷",
+   "price": 12.5,
+   "kcal": 200,
+   "kcal_estimated": true,
+   "nutrition_name": "按类别估",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_6352_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "3755",
+   "name": "纯牛奶(盒装)",
+   "price": 10.5,
+   "kcal": null,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240731/product/MS_3755_320.png",
+   "is_combo": true
+  },
+  {
+   "code": "6362",
+   "name": "100% 苹果汁(盒装)",
+   "price": 11.5,
+   "kcal": null,
+   "kcal_estimated": false,
+   "nutrition_name": "",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20250430/product/MS_6362_320_1745552987716.png",
+   "is_combo": true
+  },
+  {
+   "code": "3757",
+   "name": "纯悦",
+   "price": 7.5,
+   "kcal": 0,
+   "kcal_estimated": false,
+   "nutrition_name": "纯悦",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/20240904/product/MS_3757_320.png",
+   "is_combo": false
+  },
+  {
+   "code": "3505",
+   "name": "锡兰红茶",
+   "price": 11.0,
+   "kcal": 2,
+   "kcal_estimated": false,
+   "nutrition_name": "锡兰红茶",
+   "image": "https://menu-img.mcd.cn/pcm/prod/menu/ProductPool/product/MS_3505_320.png",
+   "is_combo": false
+  }
+ ]
+}
