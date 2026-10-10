@@ -117,27 +117,6 @@ COMBO_CACHE_USER = Path.home() / ".mcd-combo-cache.json"  # 真实模式的缓�
 # --------------------------------------------------------------------------
 
 
-# 按品类的保守估算（大卡）。顺序即优先级：先匹配先用。
-_FALLBACK_KCAL = [
-    ("巨无霸", 510), ("牛堡", 480), ("汉堡", 450), ("堡", 430),
-    ("麦旋风", 280), ("新地", 280), ("松饼", 300), ("薯条", 290),
-    ("派", 230), ("鸡", 230), ("薯饼", 150), ("油条", 180), ("玉米", 90),
-    ("雪冰", 250), ("奶茶", 250), ("奶绿", 250), ("黑巧", 220), ("奶铁", 150),
-    ("牛奶", 130), ("豆浆", 110), ("果汁", 120), ("柠檬红茶", 120), ("红茶", 120),
-    ("可乐", 105), ("雪碧", 105), ("怡泉", 110), ("汽水", 110),
-    ("冰爽", 150), ("冰美式", 15), ("咖啡", 15), ("美式", 15), ("浓缩", 5), ("卡布", 170),
-    ("酱", 25), ("冰淇淋", 200), ("圆筒", 180), ("甜筒", 180), ("粥", 200),
-]
-_FALLBACK_DEFAULT = 200
-
-
-def fallback_kcal_for(name: str) -> int:
-    for key, kcal in _FALLBACK_KCAL:
-        if key in name:
-            return kcal
-    return _FALLBACK_DEFAULT
-
-
 @dataclass
 class Product:
     code: str
@@ -830,23 +809,6 @@ class MenuEngine:
                 product.kcal_estimated = True
                 resolved += 1
         return resolved
-
-    def fill_fallback_kcal(self) -> int:
-        """给还没有热量的单品，按品类补一个保守估算（标 estimated）。
-
-        只用于没有营养表、也没有相似口味可匹配的单品。数字是粗估，有偏差很正常，
-        一律标「按类别估」，不冒充官方数字。套餐不在这里补，套餐热量由组成相加。
-        """
-        filled = 0
-        for p in self.products.values():
-            if p.merch or p.combos or p.kcal is not None:
-                continue
-            kcal = fallback_kcal_for(p.name)
-            p.kcal = kcal
-            p.kcal_estimated = True
-            p.nutrition_name = "按类别估"
-            filled += 1
-        return filled
 
     def combo_breakdown(self, combo: Combo, picked: dict | None = None) -> dict:
         """拆开一个套餐：每档选了什么、各多少热量、总共多少。

@@ -379,8 +379,6 @@ def open_store(client: McDMcpClient, saved: dict):
     """共用的开场：找到能点餐的店 + 拉好菜单。不行就说清楚为什么。"""
     store, engine = load_engine(client, saved)
     if store:
-        engine.fill_fallback_kcal()
-        apply_catalog(engine, store)
         return store, engine
     city = saved.get("city") or "你那边"
     print(f"{city}附近这几家现在都点不了（打烊或者不在营业时间）。"
@@ -644,85 +642,10 @@ def cmd_suggest(client: McDMcpClient, saved: dict, raw_args: list[str]) -> int:
 # --------------------------------------------------------------------------
 
 
-CATALOG_DIR = Path(__file__).resolve().parent.parent / "catalog"
-
-
-def catalog_path(store_code) -> Path:
-    return CATALOG_DIR / f"{store_code}.json"
-
-
-def freeze_catalog(engine, store: dict) -> int:
-    """把当前门店的商品（名字、价格、热量、图片）写成固定文件。之后查询都用这份。"""
-    import datetime as _dt
-    from menu_engine import fallback_kcal_for
-    items = []
-    for p in engine.products.values():
-        if p.merch:
-            continue
-        kcal, est = p.kcal, bool(p.kcal_estimated)
-        if p.combos:
-            # 套餐热量 = 组成相加；查不到的组成按类别估（标估算）
-            combo = engine.combo_detail(p.code)
-            detail = engine.combo_breakdown(combo) if combo else None
-            if detail:
-                kcal = detail["kcal"] + sum(fallback_kcal_for(n) for n in detail["unknown"])
-                est = bool(detail["unknown"]) or est
-        items.append({
-            "code": p.code,
-            "name": p.name,
-            "price": p.price,
-            "kcal": kcal,
-            "kcal_estimated": est,
-            "nutrition_name": p.nutrition_name or "",
-            "image": p.image or "",
-            "is_combo": bool(p.combos),
-        })
-    CATALOG_DIR.mkdir(parents=True, exist_ok=True)
-    data = {
-        "store_code": store.get("code"),
-        "store_name": store.get("name"),
-        "frozen_at": _dt.datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "products": items,
-    }
-    catalog_path(store.get("code")).write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    return len(items)
-
-
-def apply_catalog(engine, store: dict) -> int:
-    """用固定文件覆盖动态数据：名字、热量、图片都以固定文件为准。没有固定文件就不覆盖。"""
-    path = catalog_path(store.get("code"))
-    if not path.exists():
-        return 0
-    data = json.loads(path.read_text(encoding="utf-8"))
-    by_code = {it["code"]: it for it in data.get("products", [])}
-    n = 0
-    for p in engine.products.values():
-        it = by_code.get(p.code)
-        if not it:
-            continue
-        p.name = it["name"]
-        p.price = it["price"]
-        if it.get("kcal") is not None:
-            p.kcal = it["kcal"]
-            p.kcal_estimated = it.get("kcal_estimated", False)
-            p.nutrition_name = it.get("nutrition_name", "")
-        if it.get("image"):
-            p.image = it["image"]
-        n += 1
-    return n
-
-
-def cmd_quick(client: McDMcpClient, saved: dict) -> int:
-    """一次性出结果：套餐 + 吃饱推荐，同一进程只拉一次菜单。"""
-    cmd_combo(client, saved, [])
-    cmd_suggest(client, saved, ["--budget", "25", "--goal", "full"])
-    return 0
-
-
 def main(argv=None) -> int:
     args_list = list(sys.argv[1:] if argv is None else argv)
     if not args_list:
-        print("用法：mcd.py {where,want,combo,suggest,quick,order} [参数...]")
+        print("用法：mcd.py {where,want,combo,suggest,order} [参数...]")
         return 2
 
     cmd = args_list[0]
@@ -742,15 +665,6 @@ def main(argv=None) -> int:
         print("还不知道你在哪儿 —— 先说个地名，比如：mcd.py where ××市")
         return 2
 
-    if cmd == "quick":
-        return cmd_quick(client, saved)
-    if cmd == "freeze":
-        store, engine = open_store(client, saved)
-        if not engine:
-            return 1
-        n = freeze_catalog(engine, store)
-        print(f"已固定 {store.get('name')} 的 {n} 个商品 -> catalog/{store.get('code')}.json")
-        return 0
     if cmd == "combo":
         return cmd_combo(client, saved, rest)
     if cmd == "suggest":
@@ -760,7 +674,7 @@ def main(argv=None) -> int:
     if cmd == "order":
         return cmd_order(client, saved, rest)
 
-    print(f"未知命令「{cmd}」，可选：where / want / combo / suggest / quick / order")
+    print(f"未知命令「{cmd}」，可选：where / want / combo / suggest / order")
     return 2
 
 
