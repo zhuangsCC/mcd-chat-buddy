@@ -367,6 +367,13 @@ class TestDeliverables(unittest.TestCase):
             with self.subTest(cmd=cmd):
                 self.assertIn(cmd, text)
 
+    def test_readme_has_the_four_official_elements(self):
+        """官方对 README 的四项要求：项目介绍 / 安装方法 / 使用示例 / 目标用户。"""
+        text = (ROOT / "README.md").read_text(encoding="utf-8")
+        for keyword in ("项目介绍", "安装方法", "使用示例", "目标用户"):
+            with self.subTest(element=keyword):
+                self.assertIn(keyword, text, f"README 缺「{keyword}」")
+
     def test_scripts_stay_small(self):
         """脚本不许再长回去。
 
