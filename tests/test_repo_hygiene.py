@@ -341,10 +341,24 @@ class TestDeliverables(unittest.TestCase):
             with self.subTest(rule=keyword):
                 self.assertIn(keyword, text)
 
-    def test_declaration_is_flagged_as_unfilled(self):
-        """声明原文没填之前，文件里必须有醒目的警告，别让人误交。"""
+    def test_declaration_is_the_official_text(self):
+        """参赛声明必须是官方原文 —— 官方明说「文件名及内容均不可改动」。
+
+        我们把它从 M-China/mcd-developer-innovation-challenge 原样拷过来，
+        这条测试盯住三段声明的关键词，防止哪天被顺手润色了。
+        """
         text = (ROOT / "CONTEST_DECLARATION.md").read_text(encoding="utf-8")
-        self.assertIn("待填", text)
+        for keyword in ("原创性声明", "合规声明", "信息安全声明", "规则遵守声明"):
+            with self.subTest(section=keyword):
+                self.assertIn(keyword, text)
+        self.assertNotIn("待填", text)
+
+    def test_the_five_required_files_exist(self):
+        """官方要求的文件清单（含 WorkBuddy 专项奖励要的 workbuddy.md）。"""
+        for name in ("README.md", "CONTEST_DECLARATION.md", "MCP_INTEGRATION.md",
+                     "mcp-config.example.json", "workbuddy.md"):
+            with self.subTest(file=name):
+                self.assertTrue((ROOT / name).exists(), f"缺 {name}")
 
 
 # --------------------------------------------------------------------------
