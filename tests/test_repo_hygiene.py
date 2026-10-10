@@ -9,6 +9,7 @@
 3. 写接口一个都不碰 —— create-order / cancel-order / mall-create-order
 4. 用户数据不进仓库 —— memory.json / mock/images / .env
 5. 必交文件都在
+6. 没有真实个人信息 —— 手机号 / 他人姓名 / 用户真实所在地
 """
 
 from __future__ import annotations
@@ -114,6 +115,64 @@ class TestNoTokenOnDisk(unittest.TestCase):
         data = json.loads(text)
         headers = data["mcpServers"]["mcd-mcp"]["headers"]
         self.assertNotRegex(headers["Authorization"], r"Bearer\s+[A-Za-z0-9]{16,}")
+
+
+# --------------------------------------------------------------------------
+# 1b. 没有真实个人信息（官方信息安全声明）
+# --------------------------------------------------------------------------
+
+# 常见大城市名 —— 脚本文档里一旦写死这些，就说明「用户说哪儿用哪儿」被破坏了
+REAL_CITIES = ("北京", "上海", "广州", "深圳", "天津", "重庆",
+               "成都", "杭州", "武汉", "南京", "西安", "长沙",
+               "苏州", "佛山", "东莞")
+
+# 我们自己用的占位手机号，允许出现
+PLACEHOLDER_PHONE = "13800000000"
+
+
+class TestNoPersonalData(unittest.TestCase):
+    """提交材料不得含真实手机号 / 他人姓名 / 用户真实位置。"""
+
+    def test_no_phone_number_literals(self):
+        """全仓库不许出现独立的 11 位手机号（占位号除外）。
+
+        注意用边界断言 —— 毫秒时间戳（`1791540788126`）内部含 11 位数字段，
+        那不是手机号，不能误伤。
+        """
+        pat = re.compile(r"(?<![0-9])1[3-9][0-9]{9}(?![0-9])")
+        for path in iter_text_files():
+            for m in pat.finditer(path.read_text(encoding="utf-8", errors="replace")):
+                if m.group(0) == PLACEHOLDER_PHONE:
+                    continue
+                self.fail(f"{path.relative_to(ROOT)} 里疑似真手机号：{m.group(0)}")
+
+    def test_scripts_do_not_hardcode_a_city_list(self):
+        """脚本里不许写死城市名清单 —— 用户说哪儿，就原样用哪儿。"""
+        for path in sorted(SCRIPTS.glob("*.py")):
+            for lineno, line in enumerate(
+                    path.read_text(encoding="utf-8").splitlines(), 1):
+                hit = [c for c in REAL_CITIES if c in line]
+                if len(hit) >= 2:
+                    self.fail(f"{path.name}:{lineno} 写死了城市清单 {hit}")
+
+    def test_mock_stores_are_fictional(self):
+        """测试用的门店数据是虚构的：名字带 ×× 占位，且不含真实城市名。"""
+        text = (ROOT / "mock" / "query-nearby-stores.json").read_text(encoding="utf-8")
+        self.assertIn("××", text, "mock 门店名没走 ×× 占位")
+        for city in REAL_CITIES:
+            self.assertNotIn(city, text, f"mock 门店里出现真实城市名「{city}」")
+
+    def test_place_parser_keeps_the_raw_words(self):
+        """地名拆分只按行政后缀切，不认城市白名单 —— 用户说啥就原样用啥。"""
+        from mcd import _place_candidates
+        # 带后缀：按后缀切，城市在关键词里原样保留
+        self.assertEqual(_place_candidates("××市××路")[0], ("××市", "××路"))
+        # 没后缀：先整句试，再退回「前两字 + 市」的通用拆法
+        cands = _place_candidates("成都春熙路")
+        self.assertEqual(cands[0], ("成都春熙路", "成都春熙路"))
+        self.assertEqual(cands[1], ("成都市", "春熙路"))
+        # 纯地标（没城市）也先整句试，不会一上来就瞎切
+        self.assertEqual(_place_candidates("春熙路")[0], ("春熙路", "春熙路"))
 
 
 # --------------------------------------------------------------------------

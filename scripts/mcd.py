@@ -42,41 +42,37 @@ STORE_FILE = Path.home() / ".mcd-buddy.json"
 # --------------------------------------------------------------------------
 
 
+def _place_candidates(place: str) -> list[tuple[str, str]]:
+    """把用户说的地名拆成候选 (city, keyword)，从上往下试，命中即止。
+
+    全程**不写死任何城市名** —— 用户说哪儿，就原样用哪儿。
+    带「市/区/县/镇」的按后缀切；没后缀的先用整句试，不行再拿前两字当城市名试拆。
+    """
+    cands: list[tuple[str, str]] = []
+    for suffix in ("市", "区", "县", "镇"):          # 「××市××路」→ (××市, ××路)
+        idx = place.find(suffix)
+        if -1 < idx < len(place) - 1:
+            cands.append((place[:idx + 1], place[idx + 1:]))
+            break
+    cands.append((place, place))                     # 整句原话兜底（接口两个字段都不能空）
+    if len(place) > 2 and cands[0] == (place, place):  # 一句没法切，试 2 字城市前缀
+        cands.append((place[:2] + "市", place[2:]))
+    return cands
+
+
 def find_stores(client: McDMcpClient, place: str) -> list[dict]:
-    """按地名找门店，离得最近的在前面。支持智能拆分城市与地标（如：××市××路）。"""
-    city = place
-    keyword = place
-
-    # 常见城市后缀处理与拆分
-    for suffix in ("市", "区", "县", "镇"):
-        if suffix in place:
-            idx = place.find(suffix) + len(suffix)
-            if idx < len(place):
-                city = place[:idx]
-                keyword = place[idx:]
-                break
-
-    if city == place and len(place) > 2:
-        for cname in sorted(("佛山", "广州", "深圳", "东莞", "北京", "上海", "成都", "杭州", "武汉", "南京", "西安", "重庆", "长沙", "苏州")):
-            if place.startswith(cname) and len(place) > len(cname):
-                city = cname + "市"
-                keyword = place[len(cname):]
-                break
-
-    res = client.call_tool("query-nearby-stores", {
-        "beType": 1,          # 到店自取（5 是得来速车道）
-        "searchType": 2,      # 按位置搜索（1 是搜收藏的店）
-        "city": city,
-        "keyword": keyword,
-    })
-    data = (structured_of(res) or {}).get("data") or []
-    if not data and city != place:
-        # 回退直接用原词再搜一次
+    """按地名找门店，离得最近的在前面。支持复合地标（如：××市××路）。"""
+    for city, keyword in _place_candidates(place):
         res = client.call_tool("query-nearby-stores", {
-            "beType": 1, "searchType": 2, "city": place, "keyword": place,
+            "beType": 1,          # 到店自取（5 是得来速车道）
+            "searchType": 2,      # 按位置搜索（1 是搜收藏的店）
+            "city": city,
+            "keyword": keyword,
         })
         data = (structured_of(res) or {}).get("data") or []
-    return data
+        if data:
+            return data
+    return []
 
 
 def save_stores(place: str, stores: list[dict]) -> list[dict]:

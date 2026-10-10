@@ -16,7 +16,7 @@ MCD_MCP_URL     选填。默认 https://mcp.mcd.cn
     python3 scripts/mcp_client.py --list                    # 列出全部工具
     python3 scripts/mcp_client.py --list --json             # 以 JSON 输出工具清单
     python3 scripts/mcp_client.py --call now-time-info      # 调用单个工具
-    python3 scripts/mcp_client.py --call query-nearby-stores '{"address":"上海市徐汇区"}'
+    python3 scripts/mcp_client.py --call query-nearby-stores '{"city":"××市","keyword":"××区"}'
     python3 scripts/mcp_client.py --dump-mock               # 拉取只读工具真实返回存进 mock/
 
 作为库使用
